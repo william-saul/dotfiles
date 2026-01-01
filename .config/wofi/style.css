@@ -1,0 +1,23 @@
+* {
+    border-radius: 3px;
+    border: none;
+}
+
+window {
+    background: rgba(55, 30, 20, 0.28);
+    border-radius: 10px;
+    color: #f7e4c8;
+    font-family: "FreeSerif", serif;
+    padding: 8px;
+}
+
+entry {
+    background: rgba(55, 30, 20, 0.22);
+    color: #f7e4c8;
+    border-radius: 6px;
+    padding: 6px 10px;
+}
+
+#entry:selected {
+    background-color: #bc672f
+}
