@@ -1,0 +1,11 @@
+[global]
+    monitor = 0
+    follow = keyboard
+    width = 300
+    height = (0, 300)
+    offset = (20, 20)
+    padding = 2
+    font = FiraCodeNerdFont-Regular 11
+
+[colors]
+    background = "#805532"
