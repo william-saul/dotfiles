@@ -1,0 +1,33 @@
+# general settings
+auto-reload yes
+max-items 50
+browser firefox
+unbind-key u
+confirm-mark-all-feeds-read yes
+confirm-mark-feed-read no
+
+# bind keys
+bind-key j down
+bind-key k up
+bind-key l open
+bind-key h quit
+bind-key g home
+bind-key G end
+bind-key f goto-url 
+bind-key u pageup
+bind-key d pagedown
+bind-key F show-urls
+
+# solarized
+color background         default   default
+color listnormal         default   default
+color listnormal_unread  default   default
+color listfocus          black     cyan
+color listfocus_unread   black     cyan
+color info               default   black
+color article            default   default
+
+# highlights
+highlight article "^(Title):.*$" blue default
+highlight article "https?://[^ ]+" red default
+highlight article "\\[image\\ [0-9]+\\]" green default
