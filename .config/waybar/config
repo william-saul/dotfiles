@@ -1,0 +1,69 @@
+{
+    "layer": "top",
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-right":
+    ["tray",
+    "wireplumber", 
+    "cpu", 
+    "custom/bitcoin", 
+    "custom/weather", 
+    "battery", 
+    "network",
+    "wifi",
+    "custom/birthday-clock"],
+
+    "hyprland/window": {
+        "max-length": 100
+    },
+
+    "tray": {
+    },
+    "wireplumber": {
+    	"format": "{volume}% ",
+    	"format-muted": "Muted ",
+	"scroll-step": 5,
+	"on-click": "kitty -e alsamixer",
+	"on-click-right": "sh -c 'exec qpwgraph >/dev/null 2>&1 &'"
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "tooltip": true,
+        "tooltip-format": "CPU: {usage}%",
+	"on-click": "kitty -e btop"
+    },
+    "custom/bitcoin": {
+        "exec": "curl -s rate.sx/1BTC | awk '{printf \"₿%.2f\", $1}'",
+        "interval": 1800,
+        "format": " {} ",
+	"on-click": "kitty -e bash -c 'curl rate.sx/btc@30D; echo; read -p \"Press Enter to close...\"'",
+	"on-click-right": "kitty -e bash -c 'curl rate.sx; echo; read -p \"Press Enter to close...\"'"
+    },
+    "custom/weather": {
+        "exec": "curl -s wttr.in/austin?format=%c%t",
+        "interval": 1800,
+        "format": " {} ",
+	"on-click": "kitty -e bash -c 'curl wttr.in/austin; echo; read -p \"Press Enter to close...\"'",
+	"on-click-middle": "~/.local/bin/sunrise-sunset",
+	"on-click-right": "kitty -e bash -c 'curl wttr.in/moon; echo; read -p \"Press Enter to close...\"'"
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+	"format": "{icon}",
+	"format-wifi": "",
+	"format-ethernet": "",
+	"format-disconnected": "",
+	"tooltip-format-wifi": "{essid} ",
+	"tooltip-format-ethernet": "Connected ",
+	"tooltip-format-disconnected": "Disconnected",
+	"max-length": 50
+    },
+    "custom/birthday-clock": {
+        "exec": "bash -c 'echo \"{\\\"text\\\": \\\"$(date +\"%a, %d. %b %H:%M \")\\\", \\\"tooltip\\\": \\\"$( [ $(date +%m-%d) = 01-01 ] && echo is birthday || echo not birthday )\\\"}\"'",
+        "interval": 60,
+        "return-type": "json",
+	"on-click": "kitty -e calcurse"
+    }
+}
