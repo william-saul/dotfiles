@@ -1,0 +1,90 @@
+* {
+    font-family: "FreeSerif", serif;
+    font-size: 20px;
+    color: #f7e4c8;
+    border: none;
+}
+
+window#waybar {
+    background: rgba(55, 30, 20, 0.28);
+    border-bottom: 1px solid rgba(210, 170, 120, 0.35);
+    padding: 5px 0;
+}
+
+#modules-left,
+#modules-right {
+    margin: 0 11px;
+    padding: 3px 10px;
+}
+
+#workspaces button {
+    background: transparent;
+    color: #e6d6b2;
+    padding: 0 10px;
+}
+
+#workspaces button.active {
+    color: #f7e4c8;
+    background: rgba(120, 85, 50, 0.18);
+    border-radius: 6px;
+    padding: 0 10px;
+}
+
+#workspaces button:hover {
+    color: #f7e4c8; 
+    background: rgba(120, 85, 50, 0.25);
+    border-radius: 6px;
+}
+
+#hyprland-window,
+#custom-bitcoin,
+#tray,
+#network,
+#custom-birthday-clock {
+    background: transparent;
+    padding: 0 10px;
+    margin: 0 6px;
+    border-radius: 6px;
+}
+
+#battery {
+    background: transparent;
+    padding: 0 10px;
+    margin: 0 10px;
+    border-radius: 6px;
+}
+
+#cpu {
+    background: transparent;
+    border-radius: 6px;
+}
+
+#wireplumber {
+    padding: 0 10px;
+    margin: 0 33px;
+    background: transparent;
+    border-radius: 6px;
+}
+
+#custom-weather {
+    font-family: "FiraCode Nerd Font", "FreeSerif", serif;
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+#custom-weather:hover,
+#custom-bitcoin:hover,
+#battery:hover,
+#tray:hover,
+#network:hover,
+#cpu:hover,
+#wireplumber:hover,
+#custom-birthday-clock:hover,
+#hyprland-window:hover,
+#hyprland-mode:hover {
+    background: rgba(120, 85, 50, 0.22);
+}
+
+#battery.critical {
+    color: #ffb3b3;
+}
