@@ -9,3 +9,7 @@
 
 [colors]
     background = "#805532"
+
+[play_sound]
+    summary = "*"
+    script = "~/.local/bin/Lähnemann-notify"
