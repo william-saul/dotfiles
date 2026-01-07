@@ -1,5 +1,5 @@
 * {
-    font-family: "FreeSerif", serif;
+    font-family: "FiraCode Nerd Font", "FreeSerif", serif;
     font-size: 20px;
     color: #f7e4c8;
     border: none;
@@ -67,8 +67,6 @@ window#waybar {
 }
 
 #custom-weather {
-    font-family: "FiraCode Nerd Font", "FreeSerif", serif;
-    font-size: 20px;
     border-radius: 6px;
 }
 
