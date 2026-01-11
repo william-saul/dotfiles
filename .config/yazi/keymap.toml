@@ -16,6 +16,11 @@ run  = "cd ~/Documents/coding/"
 desc = "Cd to ~/Documents/coding/"
 
 [[mgr.prepend_keymap]]
+on   = [ "g", "w" ]
+run  = "cd ~/Documents/coding/williamsaul.com/"
+desc = "Cd to ~/Documents/coding/williamsaul.com/"
+
+[[mgr.prepend_keymap]]
 on   = [ "g", "p" ]
 run  = "cd ~/Pictures"
 desc = "Cd to ~/Pictures"
