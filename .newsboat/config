@@ -1,7 +1,7 @@
 # general settings
 auto-reload yes
 max-items 50
-browser firefox
+browser librewolf
 unbind-key u
 confirm-mark-all-feeds-read yes
 confirm-mark-feed-read no
