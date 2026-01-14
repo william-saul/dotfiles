@@ -59,3 +59,5 @@ function y() {
 }
 
 export PATH=$PATH:/opt/resolve/bin
+
+eval "$(starship init bash)"
