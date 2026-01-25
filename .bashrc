@@ -60,4 +60,10 @@ function y() {
 
 export PATH=$PATH:/opt/resolve/bin
 
+# make khard stop displaying Python errors
+
+alias khard='PYTHONWARNINGS=ignore khard'
+
+# starship
+
 eval "$(starship init bash)"
