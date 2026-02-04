@@ -17,8 +17,8 @@ desc = "Cd to ~/Documents/coding/"
 
 [[mgr.prepend_keymap]]
 on   = [ "g", "w" ]
-run  = "cd ~/Documents/coding/williamsaul.com/"
-desc = "Cd to ~/Documents/coding/williamsaul.com/"
+run  = "cd ~/Documents/coding/002_williamsaul.com/williamsaul.com/"
+desc = "Cd to ~/Documents/coding/002_williamsaul.com/williamsaul.com/"
 
 [[mgr.prepend_keymap]]
 on   = [ "g", "p" ]
