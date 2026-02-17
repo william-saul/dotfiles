@@ -18,14 +18,14 @@ endfunction
 
 nnoremap <leader>tt :tabnew<CR>
 nnoremap <leader>ct :tabclose<CR>
-nnoremap <leader>mm :Ex<CR>
 nnoremap <leader>hh :noh<CR>
 
-" groff
-nnoremap <leader>gg :w<CR>:silent !groff -ms -Tpdf % > %:r.pdf<CR>
-
-" Lilypond
-nnoremap <leader>ff :w<CR>:silent !lilypond --pdf %:r<CR>
+" \gg bindings for groff & lilypond
+augroup compile_to_pdf
+  autocmd!
+  autocmd FileType nroff nnoremap <buffer> <leader>gg :update<CR>:silent !groff -ms -Tpdf % > %:r.pdf<CR>
+  autocmd FileType lilypond nnoremap <buffer> <leader>gg :update<CR>:silent !lilypond --pdf %:r<CR>
+augroup END
 
 " spelling
 nnoremap <leader>ss :set spell!<CR>
@@ -35,7 +35,7 @@ nnoremap <C-Space> z=
 command! -nargs=? AddWord execute 'spellgood ' . (empty(<q-args>) ? expand('<cword>') : <q-args>)
 command! -nargs=? RemoveWord execute 'spellwrong ' . (empty(<q-args>) ? expand('<cword>') : <q-args>)
 
-" 4 spaces for tabs in HTML/CSS/JS:
+" 4 spaces for tabs in HTML/CSS/JS
 autocmd FileType html,css,javascript setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 " vim-plug
