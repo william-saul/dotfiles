@@ -47,6 +47,13 @@ window#waybar {
     border-radius: 6px;
 }
 
+#custom-mullvad {
+background: transparent;
+    padding: 0 10px;
+    margin: 0 -6px;
+    border-radius: 6px;
+}
+
 #battery {
     background: transparent;
     padding: 0 10px;
