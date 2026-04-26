@@ -50,6 +50,14 @@ swayimg.gallery.on_key("Return", function()
     swayimg.viewer.open(img.path)
 end)
 
+-- toggle viewer --> gallery
+local function exit_viewer()
+    swayimg.set_mode("gallery")
+end
+
+swayimg.viewer.on_key("q", exit_viewer)
+swayimg.viewer.on_key("Escape", exit_viewer)
+
 -- vim bindings (viewer)
 
 swayimg.viewer.on_key("p", function()
